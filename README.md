@@ -23,31 +23,18 @@
 ---
 
 ## 2. 클래스 다이어그램
-<img src="images/전체다이어그램.jpg" width="2000">
-
-### 🔍 다이어그램 작성 규칙 및 기호 의미
-본 프로젝트의 다이어그램은 표준 UML 규격을 준수하며, 특히 **추상화 계층**을 명확히 표현합니다.
-
-* **필드 접근 제어자 기호**
-  * `+` : **public** - 클래스 외부에서 접근 가능
-  * `-` : **private** - 해당 클래스 내부에서만 접근 가능 (캡슐화 적용)
-  * `#` : **protected** - 상속받은 자식 클래스에서도 접근 가능
-
-* **관계 표현 (선과 화살표 모양)**
-  * **상속(Generalization)**: 실선과 속이 빈 화살표(`▷`)를 사용하며 `is-a` 관계를 의미합니다.
-  * **실체화(Realization)**: 점선과 속이 빈 화살표를 사용하며 인터페이스의 `implements`를 의미합니다.
-  * **연관(Association)**: 실선 화살표(`→`)를 사용하며 클래스가 다른 클래스를 필드로 가짐을 의미합니다.
+<img src="images/전체다이어그램.jpg" width="1000">
 
 ---
 
 ## 3. 플레이 화면
-| 메인 타이틀 및 난이도 선택 | 전직 이벤트 | 전직 후 이미지 변경 |
-| :---: | :---: | :---: |
-| <img src="images/01.png" width="400"> | <img src="images/02.png" width="400"> | <img src="images/03.png" width="400"> |
-| GUI기반의 화면 | 특정 스테이지 도달시 | 착용 장비도 계승 |
-| 스킬 사용시 MP 부족 | 가방이 다 찼을 경우 | 숫자가 아닌 값을 입력 했을때 |
-| <img src="images/04.png" width="400"> | <img src="images/05.png" width="400"> | <img src="images/06.png" width="400"> |
-| if문을 이용한 예외처리 | if문을 이용한 예외처리 | Exception을 통한 예외처리 |
+| 메인 타이틀 및 난이도 선택 | 전직 이벤트 | 
+| :---: | :---: |
+| <img src="images/전투시작.gif" width="400"> | <img src="images/전직이벤트.gif" width="400"> |
+| GUI기반의 버튼 클릭| 전직 완료시 이미지 변경|
+| 스킬 사용시 MP 부족 | 입력값이 숫자가 아닐때 |
+| <img src="images/MP부족.gif" width="400"> | <img src="images/입력예외.gif" width="400"> |
+| if문을 이용한 예외처리 | try-catch문을 이용한 예외처리 |
 
 ---
 
@@ -89,6 +76,7 @@ public static void playerAttack(Player player, Monster monster) {
     }
 }
 ```
+<img src="images/뷰최신화.jpg" width="400">
 
 ### 4.3. 사용자 입력 유효성 검증 및 예외 핸들링
 * **문제**: 직업 선택 등은 버튼 기반으로 설계하여 안전하나, **인벤토리 아이템 번호 입력**과 같이 유저가 직접 타이핑하는 구간에서 문자열 입력 시 에러가 발생할 위험이 있음.
@@ -167,6 +155,7 @@ public class RedPotion extends Item {
 | **추상 클래스** | `Player`, `Monster`, `Item` 등의 실체 없는 생성을 막고, 자식 클래스들이 지켜야 할 규약을 강제합니다. |
 | **상속 및 전직** | `Mage(Player player)` 생성자를 통해 기존 노비스의 데이터를 그대로 계승하며 새로운 직업으로 치환(Upcasting)하는 다형성 로직을 구현했습니다. |
 | **유연한 아이템 사용** | `Item.useItem`을 일반 메서드로 두어, 자식 클래스에서 필요한 대상(유저 혹은 몬스터)의 기능만 선택적으로 오버라이드하게 설계했습니다. |
+<img src="images/상속.jpg" width="400">
  
 ### 6.2. ArrayList (동적 배열 리스트)
 
