@@ -1,9 +1,9 @@
 package user;
 
-import common.Skill; 
+import common.Skill;  
 import gameFrame.GameFrame;
 
-public class Player implements Skill {
+public abstract class Player implements Skill {
 
     private String name;
     private String job;
@@ -14,8 +14,8 @@ public class Player implements Skill {
     private int str;
     private int dex;
     private int wis;
-    private String firstSkillName = "필사의 일격";
-    private String secondSkillName = "젖 먹던 힘까지";
+    private String firstSkillName;
+    private String secondSkillName;
     private Inventory inventory;
     private String weapon;
     private int removeWeaponPower;
@@ -25,42 +25,16 @@ public class Player implements Skill {
 
     public Player (String name) {
         this.name = name;
-        this.job = "novice";
         this.inventory = new Inventory();
         this.weapon = "없음";
         this.armor = "없음";
-        hp = 100;
-        maxHp = 100;
-        mp = 100;
-        maxMp = 100;
-        str = 5 + (int)(Math.random()*5);
-        dex = 5 + (int)(Math.random()*5);
-        wis = 5 + (int)(Math.random()*5);
     }
     
     @Override
-    public int firstSkill() {
-        if(this.mp >= 20) {
-            this.mp -= 20;
-            GameFrame.logArea.append("⚔️ [필사의 일격] " + this.name + "이(가) 온 힘을 다해 공격합니다!\n");
-            return this.str + this.dex + this.wis;
-        } else {
-            GameFrame.logArea.append("MP가 부족합니다. (필요 MP: 20)\n");
-            return 0;
-        }
-    }
+    public abstract int firstSkill();
 
     @Override
-    public int secondSkill() {
-        if(this.mp >= 80) {
-            this.mp -= 80;
-            GameFrame.logArea.append("😫 [젖 먹던 힘까지] " + this.name + "이(가) 눈을 질끈 감고 무기를 마구 휘두릅니다!\n");
-            return this.str*2 + this.dex*2 + this.wis*2;
-        } else {
-            GameFrame.logArea.append("MP가 부족합니다. (필요 MP: 80)\n");
-            return 0;
-        }
-    }
+    public abstract int secondSkill();
     
     // [갑옷 착용]
     public void wearArmor(String name, int power) {
@@ -105,10 +79,7 @@ public class Player implements Skill {
     }
     
     // [공격]
-    public int attack() {
-        GameFrame.logArea.append(name + "이(가) 주먹으로 공격했습니다\n");
-        return (str/2) + (dex/2) + (wis/2);
-    }
+    public abstract int attack();
     
     // [피격]
     public void takeAttack(int damage) {

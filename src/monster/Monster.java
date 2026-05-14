@@ -1,17 +1,11 @@
 package monster;
 
-import java.util.List; 
+import java.util.List;  
 import java.util.ArrayList;
 import gameFrame.GameFrame;
-import item.GoodArmor;
-import item.BadArmor;
-import item.BluePotion;
-import item.Dynamite;
-import item.Item;
-import item.RedPotion;
-import item.GoodWeapon;
+import item.*;
 
-public class Monster {
+public abstract class Monster {
     private String name;
     private int hp;
     private int maxHp;
@@ -41,9 +35,7 @@ public class Monster {
     }
     
     // [공격]
-    public int attack() {
-        return power;
-    }
+    public abstract int attack();
     
     // [피격]
     public void takeAttack(int damage) {

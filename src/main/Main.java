@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import common.Story;
 import gameFrame.GameFrame;
 import job.Mage;
+import job.Novice;
 import job.Rogue;
 import job.Warrior;
 import common.BattleSystem;
@@ -46,7 +47,7 @@ public class Main {
     }
 
     public static void initPlayer(String name) {
-        user = new Player(name);
+        user = new Novice(name);
         GameFrame.logArea.append("\n용사 " + name + "님의 모험이 시작됩니다!\n");
         playStageStory();
     }

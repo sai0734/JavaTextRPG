@@ -4,7 +4,7 @@ import gameFrame.GameFrame;
 import monster.Monster;
 import user.Player;
 
-public class Item {
+public abstract class Item {
     protected String name;
     protected String type;
     protected int power;
