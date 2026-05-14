@@ -41,14 +41,13 @@
 ---
 
 ## 3. 플레이 화면
-| 메인 타이틀 및 난이도 선택 | 전투 진행 화면 | 전투 진행 화면 |
+| 메인 타이틀 및 난이도 선택 | 전직 이벤트 | 전직 후 이미지 변경 |
 | :---: | :---: | :---: |
-| <img src="images/start_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> |
-| *운명의 난이도를 선택하는 시작 화면* | *폭룡 아카르와의 치열한 전투 로그* | *폭룡 아카르와의 치열한 전투 로그* |
-| 메인 타이틀 및 난이도 선택 | 전투 진행 화면 | 전투 진행 화면 |
-| :---: | :---: | :---: |
-| <img src="images/start_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> |
-| *운명의 난이도를 선택하는 시작 화면* | *폭룡 아카르와의 치열한 전투 로그* | *폭룡 아카르와의 치열한 전투 로그* |
+| <img src="images/01.png" width="400"> | <img src="images/02.png" width="400"> | <img src="images/03.png" width="400"> |
+| GUI기반의 화면 | 특정 스테이지 도달시 | 착용 장비도 계승 |
+| 스킬 사용시 MP 부족 | 가방이 다 찼을 경우 | 숫자가 아닌 값을 입력 했을때 |
+| <img src="images/04.png" width="400"> | <img src="images/05.png" width="400"> | <img src="images/06.png" width="400"> |
+| if문을 이용한 예외처리 | if문을 이용한 예외처리 | Exception을 통한 예외처리 |
 
 ---
 
