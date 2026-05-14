@@ -16,6 +16,7 @@ public class Inventory {
 	// [가방]
     private List<Item> items;
     private int maxSize = 10;
+    
     public Inventory() {
         this.items = new ArrayList<>();
         items.add(new RedPotion());

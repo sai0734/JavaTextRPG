@@ -86,9 +86,7 @@ public class BattleSystem {
             return; 
         } else {
             GameFrame.logArea.append("\n========== [ 가방 목록 ] ==========\n");
-            for (int i = 0; i < invItems.size(); i++) {
-                GameFrame.logArea.append((i + 1) + ". " + invItems.get(i).getName() + "\n");
-            }
+            player.getInventoryInfo();
             GameFrame.logArea.append("===================================\n");
             
             String input = JOptionPane.showInputDialog(null, "사용하실 아이템 번호를 입력하세요 (0번: 취소)");
