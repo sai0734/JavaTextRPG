@@ -126,7 +126,7 @@ public class BattleSystem {
                         GameFrame.logArea.append("잘못된 아이템 번호입니다.\n");
                     }
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 GameFrame.logArea.append("숫자만 입력할 수 있습니다.\n");
             }
         }
@@ -179,7 +179,7 @@ public class BattleSystem {
 	                        int removeItem = Integer.parseInt(dropInput);
 	                        player.getInventory().removeItem(removeItem - 1);
 	                        GameFrame.logArea.append(removeItem + "번 아이템을 버렸습니다.\n");
-	                    } catch (Exception e) {
+	                    } catch (NumberFormatException e) {
 	                        GameFrame.logArea.append("잘못된 입력으로 아무것도 버리지 못했습니다.\n");
 	                    }                   
 	                }
