@@ -1,6 +1,6 @@
 package user;
 
-import common.Skill;  
+import common.Skill;   
 import gameFrame.GameFrame;
 
 public abstract class Player implements Skill {

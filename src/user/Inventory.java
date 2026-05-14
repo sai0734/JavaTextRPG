@@ -1,6 +1,7 @@
 package user;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;  
+import java.util.List;  
 import gameFrame.GameFrame;
 import item.Item;
 import item.GoodArmor;
@@ -13,7 +14,7 @@ import item.GoodWeapon;
 
 public class Inventory {
 	// [가방]
-    private ArrayList<Item> items;
+    private List<Item> items;
     private int maxSize = 10;
     public Inventory() {
         this.items = new ArrayList<>();
@@ -54,11 +55,11 @@ public class Inventory {
     }
 
     // [Getter && Setter]
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
-    public void setItems(ArrayList<Item> items) {
+    public void setItems(List<Item> items) {
         this.items = items;
     }
     

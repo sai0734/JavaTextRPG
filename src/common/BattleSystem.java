@@ -1,6 +1,7 @@
 package common;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
+import java.util.List; 
 import javax.swing.JOptionPane;
 
 import gameFrame.GameFrame;
@@ -78,7 +79,7 @@ public class BattleSystem {
 
     // [가방 버튼 클릭]
     public static void playerInventory(Player player, Monster monster) {
-        ArrayList<Item> invItems = player.getInventory().getItems();
+        List<Item> invItems = player.getInventory().getItems();
         
         if(invItems.size() == 0) {
             GameFrame.logArea.append("가방이 텅 비어 있습니다.\n\n");                
@@ -168,7 +169,7 @@ public class BattleSystem {
 	                if(player.getInventory().getItems().size() >= 10) {                    
 	                    GameFrame.logArea.append("가방이 꽉 찼습니다. 버릴 아이템을 선택하여 주십시오.\n");
 	                    
-	                    ArrayList<Item> invItems = player.getInventory().getItems();
+	                    List<Item> invItems = player.getInventory().getItems();
 	                    for (int i = 0; i < invItems.size(); i++) {
 	                        GameFrame.logArea.append((i + 1) + ". " + invItems.get(i).getName() + "\n");
 	                    }
