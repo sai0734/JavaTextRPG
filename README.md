@@ -41,7 +41,14 @@
 ---
 
 ## 3. 플레이 화면
-*(여기에 게임 실행 스크린샷 또는 GIF를 삽입하세요)*
+| 메인 타이틀 및 난이도 선택 | 전투 진행 화면 | 전투 진행 화면 |
+| :---: | :---: | :---: |
+| <img src="images/start_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> |
+| *운명의 난이도를 선택하는 시작 화면* | *폭룡 아카르와의 치열한 전투 로그* | *폭룡 아카르와의 치열한 전투 로그* |
+| 메인 타이틀 및 난이도 선택 | 전투 진행 화면 | 전투 진행 화면 |
+| :---: | :---: | :---: |
+| <img src="images/start_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> | <img src="images/battle_screen.png" width="400"> |
+| *운명의 난이도를 선택하는 시작 화면* | *폭룡 아카르와의 치열한 전투 로그* | *폭룡 아카르와의 치열한 전투 로그* |
 
 ---
 
